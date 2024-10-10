@@ -1,0 +1,189 @@
+/* General body and layout styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container for the profile list */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Add Profile Button */
+.add-profile-button {
+  padding: 12px 25px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.add-profile-button:hover {
+  background-color: #218838;
+}
+
+/* Profile cards container */
+.profile-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px; /* Increased gap between profile cards */
+  justify-items: center;
+  margin-top: 20px;
+}
+
+/* Individual profile card styling */
+.profile-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Profile card image */
+.profile-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Profile card content */
+.profile-card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.profile-card p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Button styling for profile actions */
+.profile-card .profile-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profile-card .profile-buttons a,
+.profile-card .profile-buttons button {
+  padding: 8px 15px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.profile-card .profile-buttons a {
+  background-color: #007BFF;
+  color: white;
+}
+
+.profile-card .profile-buttons a:hover {
+  background-color: #0056b3;
+}
+
+.profile-card .profile-buttons button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.profile-card .profile-buttons button:hover {
+  background-color: #218838;
+}
+
+/* Profile Form Styling */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.profile-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.profile-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.profile-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  /* Make profile cards take more space on small screens */
+  .profile-card {
+    width: 90%;
+  }
+
+  .profile-card img {
+    height: 180px;
+  }
+
+  .profile-list {
+    grid-template-columns: 1fr;
+  }
+
+  .add-profile-button {
+    width: 100%;
+  }
+
+  .profile-form {
+    gap: 10px;
+  }
+}
