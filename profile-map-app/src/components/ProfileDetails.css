@@ -1,0 +1,13 @@
+.circular-profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  height: 300px;
+  width: 100%;
+}
